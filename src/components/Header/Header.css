@@ -1,0 +1,136 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 88px;
+  padding: 0 64px;
+}
+
+.header a {
+  font-weight: 500;
+  font-size: 14px;
+  color: #8792a7;
+  margin: 0px 20px;
+  text-decoration: none;
+}
+
+.header a.active {
+  color: #121212;
+}
+
+.header .select {
+  margin-left: 10px;
+}
+
+.header .options {
+  position: absolute;
+  width: 110px;
+  background: #ffffff;
+  box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.04);
+  list-style-type: none;
+  padding: 4px 0;
+  cursor: pointer;
+}
+
+.header .option {
+  font-size: 12px;
+  line-height: 20px;
+  color: #8792a7;
+  padding: 4px 8px;
+}
+
+.header .option:hover {
+  color: #c8c8c8;
+}
+
+.header button {
+  width: 95px;
+  height: 40px;
+  border: 1px solid #121212;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #121212;
+  font-size: 14px;
+  line-height: 24px;
+  position: relative;
+  margin-right: 15px;
+}
+
+.header button::before {
+  background-color: #fff;
+  box-sizing: border-box;
+  content: 'Call us';
+  padding-top: 5px;
+  width: 95px;
+  height: 40px;
+  border: 1px solid #121212;
+  display: block;
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  transition: all 0.1s ease-in-out;
+}
+
+.header button:hover::before {
+  top: -1px;
+  right: -1px;
+}
+
+.header button:active::before {
+  color: #8792a7;
+}
+
+.header .menu {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .header {
+    padding: 0 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 0 72px;
+  }
+
+  .header .nav {
+    display: none;
+  }
+
+  .header .menu {
+    margin-left: 32px;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .header .menu-text {
+    margin-left: 16px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #121212;
+  }
+}
+
+@media (max-width: 576px) {
+  .header {
+    padding: 0 24px;
+    min-height: 64px;
+    background: rgba(255, 255, 255, 0.56);
+    position: relative;
+    z-index: 100;
+  }
+
+  .header .logo {
+    width: 66px;
+  }
+
+  .header button {
+    display: none;
+  }
+
+  .header .menu-text {
+    display: none;
+  }
+}

@@ -1,0 +1,151 @@
+.main {
+  max-width: 864px;
+  margin: 0 auto;
+  margin-top: 78px;
+  padding: 42px 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main h1 {
+  width: 80%;
+  font-weight: 800;
+  font-size: 56px;
+  line-height: 80px;
+  text-align: center;
+  letter-spacing: 0.01em;
+  color: #121212;
+}
+
+.main h2 {
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 34px;
+  text-transform: uppercase;
+  color: #018fde;
+  text-align: center;
+  margin-top: 26px;
+}
+
+.main .info {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.main .text {
+  margin-right: 25px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  color: #3d3d3d;
+}
+
+.main button {
+  position: relative;
+  background: #121212;
+  border: none;
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+  padding: 8px 23px;
+  width: 210px;
+  height: 40px;
+  transform: translateX(-2px);
+  transition: right 0.7s ease-in;
+}
+
+.main button::before {
+  content: '';
+  width: 210px;
+  height: 40px;
+  border: 1px solid #121212;
+  display: block;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+}
+
+.main button:hover::before {
+  top: 0;
+  right: 0;
+}
+
+.main button:hover {
+  top: 4px;
+  right: 4px;
+}
+
+.main button:active {
+  color: #8792a7;
+}
+
+.main .left-corner {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.main .right-corner {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+@media (max-width: 768px) {
+  .main h1 {
+    font-size: 48px;
+    line-height: 72px;
+    width: 100%;
+  }
+
+  .main h2 {
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  .main .line {
+    max-width: 427px;
+  }
+}
+
+@media (max-width: 576px) {
+  .main {
+    margin-top: 48px;
+    padding: 0;
+  }
+
+  .main h1 {
+    font-size: 32px;
+    line-height: 48px;
+    width: 80%;
+  }
+
+  .main h2 {
+    font-size: 20px;
+    line-height: 24px;
+    width: 80%;
+  }
+
+  .main .line {
+    max-width: 272px;
+  }
+
+  .main .info {
+    flex-direction: column;
+  }
+
+  .main .info button {
+    margin-top: 8px;
+  }
+
+  .main .left-corner,
+  .main .right-corner {
+    display: none;
+  }
+  .main .text {
+    text-align: center;
+  }
+}

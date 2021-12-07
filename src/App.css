@@ -1,38 +1,69 @@
-.App {
-  text-align: center;
+.app {
+  position: relative;
+  background: linear-gradient(180deg, #ffffff 0%, #e6edfa 100%);
+  overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.first-elipse {
+  position: absolute;
+  width: 571px;
+  height: 362px;
+  left: -290px;
+  top: 200px;
+
+  background: linear-gradient(
+    264.93deg,
+    #072e44 9.13%,
+    #018fde 106.76%
+  );
+  opacity: 0.14;
+  filter: blur(50px);
+  border-radius: 50%;
+  transform: rotate(-150deg);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.second-elipse {
+  position: absolute;
+  width: 472px;
+  height: 558px;
+  right: -200px;
+  top: 100px;
+
+  background: linear-gradient(
+    267.33deg,
+    #018fde 19.54%,
+    #072e44 123.71%
+  );
+  opacity: 0.14;
+  filter: blur(50px);
+  transform: rotate(-52deg);
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .first-elipse {
+    top: 350px;
+    left: 300px;
+  }
+
+  .second-elipse {
+    top: -150px;
+    left: -200px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 576px) {
+  .first-elipse {
+    width: 260.2px;
+    height: 189.8px;
+    top: 200px;
+    left: 200px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .second-elipse {
+    width: 240px;
+    height: 263.78px;
+    top: -70px;
+    left: -100px;
   }
 }
